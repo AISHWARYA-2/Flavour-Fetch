@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chef Dashboard</title>
+        <link rel="icon" type="image/x-icon" href="#">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/chef_db.css"/>
+        <script src="./js/chefDB.js"></script> 
+        <!-- Font Awesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="stylesheet" href="./css/nav.css"/>
+    </head>
+    <body background="https://t3.ftcdn.net/jpg/06/02/02/86/240_F_602028681_iJz0LQAmokgjKqUqfMSQ24UNos9Lfvj9.jpg">
+        
+        <div class="menu">
+            <nav>
+              <input type="checkbox" id="check" />
+              <label for="check" class="checkbtn">
+                <ion-icon name="grid-outline"></ion-icon>
+              </label>
+          
+              <label class="logo">Flavour Fetch</label>
+          
+              <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./home.html#about">About</a></li>
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./chef_login.html" class="active">Chef</a></li>
+                <li><a href="./user_login.html">User</a></li>
+                <li><button id="logoutButty" onclick="out();">Logout</button></li>
+                <script>
+                    function out(){
+                        let retrievedData = JSON.parse(localStorage.getItem("foodlover_chef_dashboard"));
+                    retrievedData.name = "";
+                    let updatedData = JSON.stringify(retrievedData);
+                    localStorage.setItem("foodlover_chef_dashboard", updatedData);
+        
+                    window.location.href = "./home.html";
+                    }
+                </script>
+              </ul>
+            </nav>
+          </div>
+        <section class="chefDAS">
+            <img src="https://as2.ftcdn.net/v2/jpg/02/62/19/13/1000_F_262191341_hNmV5IQHesToiCsWWYscL7jy6PyeoBOL.jpg"
+                alt="chef">
+            <div class="aboutCh">
+                <h3 id="chef_name"></h3>
+                <pre>
+
+
+
+
+
+                </pre>
+                <pre class="quote">"The most indispensible ingredient for all good home cooking:
+                    love for those you are cooking for."
+                </pre>
+                <!--span>Welcome to our cozy home-based restaurant, where we serve up delicious 
+                    meals made with love and a commitment to ethical cooking. We believe that 
+                    good food should be enjoyed in a warm and welcoming atmosphere, and that's exactly 
+                    what we provide. Using only the freshest, locally-sourced ingredients, we create 
+                    dishes that are not only tasty, but also good for you and the planet. So come on in 
+                    and enjoy a home-cooked meal that's made just for you. Delicious food with a conscience - 
+                    that's what we're all about!</span-->
+            </div>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffbe0b" fill-opacity="1" d="M0,96L60,90.7C120,85,240,75,360,74.7C480,75,600,85,720,106.7C840,128,960,160,1080,176C1200,192,1320,192,1380,192L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+        <section class="addFoodSec">
+            <h1 id="headAdd" >Today I am Cooking...</h1>
+            <div id="foodData">
+                <div class="addFood">
+                    <form action="" id="FoodForm">
+                        <br><h1>Add Food<br></h1><br>
+                        <i class="fa-solid fa-utensils" style="font-size: 30px;"></i>
+                        <br>
+                        <br>
+                        <input type="text" id="name" class="form-control" placeholder="Enter The Food Name...">
+                        <input type="number" id="cost" class="form-control" placeholder="Enter The Cost of the food...">
+                        <input type="url" id="imgUrl" class="form-control" placeholder="Enter The Image Link">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <svg style="transform: translateY(5px);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffbe0b" fill-opacity="1" d="M0,32L60,37.3C120,43,240,53,360,101.3C480,149,600,235,720,272C840,309,960,299,1080,261.3C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        <section class="orderpg">
+            <h1 id="headAdd">My Order...</h1>
+            <br>
+            <div id="OrderData"></div>
+        </section>
+    </body>
+</html>

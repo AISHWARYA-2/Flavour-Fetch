@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flavour Fetch</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  </head>
+  <body>
+    <!-- Menu -->
+    <div class="menu">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <ion-icon name="grid-outline"></ion-icon>
+        </label>
+
+        <label class="logo">Flavour Fetch</label>
+
+        <ul>
+          <li><a href="./home.html" class="active">Home</a></li>
+          <li><a href="./home.html#about">About</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./chef_login.html">Chef</a></li>
+          <li><a href="./user_login.html">User</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Hero Section -->
+    <div class="section flex" id="hero-section">
+      <div class="text">
+        <h1 class="primary">
+          It's Not Just Food, <br />
+          It's <span>Home Food</span>
+        </h1>
+
+        <p class="tertiary">
+          Home cooked food is healthier than fast food or takeout. 
+          The nutritional value of the produce used will be maintained when you cook at home. 
+          Usually, the takeout that you order will have a lot of oil, butter and spices which might not be healthy, 
+          especially when eaten on a daily basis.
+        </p>
+
+        <a href="./menu.html" class="btn">Explore Menu</a>
+      </div>
+      <div class="visual">
+        <img src="https://imgmediagumlet.lbb.in/media/2021/04/607f9a052d39a822971fc2ef_1618975237223.jpg?fm=webp&w=750&h=500&dpr=1" alt="" />
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+    <!-- How It Works -->
+    <div class="section" id="how-it-works">
+      <h2 class="secondary">How It Works</h2>
+
+      <div class="container flex">
+        <div class="box">
+          <h3>Easy Order</h3>
+          <ion-icon name="timer-outline"></ion-icon>
+          <p>
+            Direct Contact with Chef and no middle man agent so cost 
+            effective and budget friendly
+          </p>
+        </div>
+
+        <div class="box active">
+          <h3>Best Quality</h3>
+          <ion-icon name="trophy-outline"></ion-icon>
+          <p>
+            Its Home cooked !!!! The Best food is from the home because its filled with love
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>Fast Delivery</h3>
+          <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+          <p>
+            Direct takeaway from the Chef's place and even home delivery option is there 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- End How It Works -->
+
+    <!-- About -->
+    <div class="section" id="about">
+      <div class="container flex">
+        <div class="visual">
+          <img src="https://media.photographycourse.net/wp-content/uploads/2022/04/08160740/online-courses-food-photography-styling.jpg" alt="" />
+        </div>
+        <div class="text">
+          <div class="secondary">About Flavour Fetch</div>
+          <h2 class="primary">50+</h2>
+
+          <h3 class="tertiary">Delicious Home Food</h3>
+
+          <p>
+            Home cooked food is healthier than fast food or takeout. 
+            The nutritional value of the produce used will be maintained when you cook at home. 
+            Usually, the takeout that you order will have a lot of oil, butter and spices which might not be healthy, 
+            especially when eaten on a daily basis.
+          </p>
+
+          <a href="./menu.html" class="btn">Explore Menu</a>
+        </div>
+      </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Restaurant Menu -->
+    <!--div class="section" id="menu">
+      <div class="container">
+        <ul class="category">
+          <li class="active">All</li>
+          <li ><a href="chef/chef_dashboard/gate_page.html"> North Indian</a></li>
+          <li><a href="./user/user_register.html">South Indian</a></li>
+          <li><a href="./user/user_register.html">Chineese</a></li>
+          <li><a href="./user/user_register.html">American</a></li>
+          <li><a href="./user/user_register.html">Snacks</a></li>
+        </ul>
+
+        <div class="container">
+          <div class="restaurant-menu">
+            <div class="menu-item">
+              <img src="https://images.healthshots.com/healthshots/hi/uploads/2021/11/29201838/Idli-vs-vada-1.jpg" alt="" />
+
+              <div class="title">Idly Vada</div>
+
+              <div class="location">Rajankunte</div>
+
+              <div class="order flex">
+                <div class="price">Rs 25.00</div>
+                <a href="#" class="btn btn-menu">Order Now</a>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img src="https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__700_0_0_0_auto.jpg" alt="" />
+
+              <div class="title">Dosa</div>
+
+              <div class="location">Doddaballapura</div>
+
+              <div class="order flex">
+                <div class="price">Rs 40.00</div>
+                <a href="#" class="btn btn-menu">Order Now</a>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img src="https://theindianclaypot.com/content/images/wp-content/uploads/2018/11/chole-poori-1.jpg" alt="" />
+
+              <div class="title">Poori</div>
+
+              <div class="location">Ittagalpura</div>
+
+              <div class="order flex">
+                <div class="price">Rs 30.00</div>
+                <a href="#" class="btn btn-menu">Order Now</a>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/nxzl08dadoniomvyokiv" alt="" />
+
+              <div class="title">Anna Sambar</div>
+
+              <div class="location">Rajankunte</div>
+
+              <div class="order flex">
+                <div class="price">Rs 50.00</div>
+                <a href="#" class="btn btn-menu">Order Now</a>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img src="https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2017/0-Archana/4-Chettinad_Veg_Pulao_Recipe_Figaro_Pure_Olive_Oil-1.jpg" alt="" />
+
+              <div class="title">Pulav</div>
+
+              <div class="location">NES</div>
+
+              <div class="order flex">
+                <div class="price">Rs 40.00</div>
+                <a href="#" class="btn btn-menu">Order Now</a>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <img src="https://imagevars.gulfnews.com/2022/03/11/Guntur-Gongura-Biryani-_17f793bfa09_large.jpg" alt="" />
+
+              <div class="title">Biryani</div>
+
+              <div class="location">Yelhanka</div>
+
+              <div class="order flex">
+                <div class="price">Rs 100.00</div>
+                <a href="#" class="btn btn-menu">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div-->
+    <!-- End Restaurant Menu -->
+
+    <!-- Testimonial -->
+    <div class="section" id="testimonial">
+      <div class="container flex">
+        <div class="text">
+          <h2 class="secondary">What people say about Flavour Fetch</h2>
+          <p>
+           As a student living in PG, The food was not good. Nothing can match Home cooked food. I 
+           used to eat in many restaurants but it did not give me the satisfaction.Flavour Fetch 
+           helped me choose home cooked food at a reasonable prize. The food quality as cooked and 
+           the delivery time was also fast.  
+          </p>
+
+          <div class="user flex">
+            <img src="https://avatarfiles.alphacoders.com/165/165724.jpg" alt="" />
+
+            <div class="name">
+              <div class="title">Sowjanya</div>
+              <div class="location">Presidency University</div>
+            </div>
+          </div>
+        </div>
+        <div class="visual">
+          <img src="https://www.danielshustle.com/wp-content/uploads/food-blogging.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- End Testimonial -->
+
+
+    <!-- App -->
+    <div class="section" id="app">
+      <div class="container flex">
+        <div class="visual">
+          <img src="https://raw.githubusercontent.com/programmercloud/foodlover/main/img/app.png" alt="" />
+        </div>
+
+        <div class="text">
+          <h2 class="secondary">Download Flavour Fetch App</h2>
+          <p>
+            Home cooked food is healthier than fast food or takeout. 
+          The nutritional value of the produce used will be maintained when you cook at home. 
+          Usually, the takeout that you order will have a lot of oil, butter and spices which might not be healthy, 
+          especially when eaten on a daily basis.
+          </p>
+
+          <div class="download flex">
+            <div class="app-store">
+              <ion-icon name="logo-google-playstore"></ion-icon>
+              <p>
+                GET IT ON <br />
+                <span>Google Play</span>
+              </p>
+            </div>
+
+            <div class="app-store">
+              <ion-icon name="logo-apple"></ion-icon>
+              <p>
+                Donload on the <br />
+                <span>App Store</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End App -->
+
+    <!-- Footer -->
+     <div class="footer">
+      <div class="container flex">
+        <div class="footer-about">
+          <h2>About</h2>
+          <p>
+            Home cooked food is healthier than fast food or takeout. 
+          The nutritional value of the produce used will be maintained when you cook at home. 
+          Usually, the takeout that you order will have a lot of oil, butter and spices which might not be healthy, 
+          especially when eaten on a daily basis.
+        </div>
+
+        <div class="footer-category">
+          <h2>Our Menu</h2>
+
+          <ul>
+            <li>Biryani</li>
+            <li>Pulav</li>
+            <li>Anna Sambar</li>
+            <li>Idly Vada</li>
+            <li>Dosa</li>
+          </ul>
+        </div>
+
+        <div class="quick-links">
+          <h2>Quick Links</h2>
+
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Menu</li>
+            <li>Order</li>
+            <li>Services</li>
+          </ul>
+        </div>
+
+        <div class="get-in-touch">
+          <h2>Get in touch</h2>
+          <ul>
+            <li>Account</li>
+            <li>Support Center</li>
+            <li>Feedback</li>
+            <li>Suggession</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      <div class="copyright">
+        <p>Copyright &copy; 2023. Flavour Fetch. All Rights Reserved.</p>
+      </div>
+    </div>
+     
+       
+    
+    <!-- End Footer -->
+
+    <!-- Ion Icons Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+  </body>
+</html>

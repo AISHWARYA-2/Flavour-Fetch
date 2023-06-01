@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Phone Auth with reCAPTCHA</title>
+  <!-- Add the Firebase SDK and reCAPTCHA script -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <style>
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(236, 236, 236);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px #929292;
+    }
+
+    .popup button {
+      padding: 5px 15px;
+      border-radius: 5px;
+      border-width: 1px;
+      background-color: rgb(130, 205, 255);
+    }
+
+    .popup input {
+      padding: 5px 5px;
+      border-radius: 5px;
+      border-width: 1px;
+    }
+
+    .popup p {
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+      transform: translateY(20px);
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup">
+    <h1>OTP authentication</h1>
+
+    <!-- Add a container element for the reCAPTCHA widget -->
+    <div id="recaptcha-container"></div>
+
+    <!-- Add a form to get the user's phone number -->
+    <form onsubmit="startAuth(event)">
+      <label for="phone">Enter your phone number:</label><br>
+      <input type="tel" id="phone" name="phone" required>
+      <button type="submit">Get Verification Code</button>
+    </form>
+
+    <!-- Add a form to enter the verification code -->
+    <form onsubmit="submitCode(event)">
+      <label for="code">Enter the verification code:</label><br>
+      <input type="text" id="code" name="code" required>
+      <button type="submit">Verify Code</button>
+    </form>
+
+    <!-- Add a placeholder element for displaying errors -->
+    <div id="error"></div>
+    <p>©Flavour Fetch 2023</p>
+  </div>
+
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDLTmNykPXkx4XGLNKz8WxCo_y1QOFz9cE",
+      authDomain: "flavour-fetch-1d5e3.firebaseapp.com",
+      databaseURL: "https://flavour-fetch-1d5e3-default-rtdb.firebaseio.com",
+      projectId: "flavour-fetch-1d5e3",
+      storageBucket: "flavour-fetch-1d5e3.appspot.com",
+      messagingSenderId: "733016344539",
+      appId: "1:733016344539:web:5ab3d2f270d4d8458b49fe",
+      measurementId: "G-G3VF6W2K76"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // Create a reCAPTCHA verifier instance
+    const recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+      size: 'invisible',
+      callback: (response) => {
+        // reCAPTCHA verification successful, proceed with phone auth
+      }
+    });
+
+    // Function to start phone authentication
+    function startAuth(event) {
+      event.preventDefault();
+      const phoneNumber = document.getElementById('phone').value;
+      firebase.auth().signInWithPhoneNumber(phoneNumber, recaptchaVerifier)
+        .then((confirmationResult) => {
+          // SMS verification code sent successfully, save the confirmation result
+          window.confirmationResult = confirmationResult;
+        })
+        .catch((error) => {
+          // Phone authentication failed, display the error message
+          document.getElementById('error').innerHTML = error.message;
+        });
+    }
+
+    // Function to submit the verification code
+    function submitCode(event) {
+      event.preventDefault();
+      const code = document.getElementById('code').value;
+      confirmationResult.confirm(code)
+        .then((result) => {
+          // Phone authentication successful, user signed in
+          window.location.href = './user_dashboard.html'
+        })
+        .catch((error) => {
+          // Verification code invalid, display the error message
+          alert("Invalid OTP")
+          document.getElementById('error').innerHTML = error.message;
+        });
+    }
+  </script>
+</body>
+
+</html>

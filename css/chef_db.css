@@ -1,0 +1,124 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat", sans-serif;
+}
+
+.addFood{
+    background-color: rgba(255, 190, 11, 0.404);
+    border-style: dashed;
+    border-color: rgb(255, 190, 11);
+    box-shadow: 5px 10px 5px #747474;
+    border-radius: 15px;
+    border-width: 4px;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    margin: 10px;
+}
+
+.addFood input{
+    position: relative;
+	border-radius: 12px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 5px;
+    transform: translateX(10px);
+	background: #ffffff;
+    box-shadow: -5px -5px 5px rgba(85, 51, 0, 0.26)
+}
+
+.addFood button{
+    position: relative;
+	border-radius: 5px;
+    border-style: hidden;
+    margin: 5px;
+    padding: 5px;
+	background: rgb(255, 190, 11);
+    box-shadow: 5px 5px 5px #535353a9;
+}
+
+.provideFood{
+    height:260px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgb(255, 190, 11);
+    box-shadow: 5px 10px 5px #747474;
+    text-align: center;
+
+    margin: 10px;
+}
+.provideFood img{
+    width: 100%;
+}
+
+#foodData{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.addFoodSec{
+    padding: 10px;
+}
+.quote{
+    font-size:0.9cm;
+    font-style:italic;
+    font-weight:bold;
+    color:#fffefe
+}
+.chefDAS{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10px;
+    background-color: #ffbe0b;
+    padding: 5px;
+}
+.chefDAS h1{
+    font-size: 8.5vh;
+}
+.aboutCh{
+    transform: translateY(10vh);
+    padding: 10px;
+}
+.chefDAS img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    transform: translateY(20vh);
+}
+#headAdd{
+    font-size: 6.5vh;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.orderpg{
+    background-color: #ffbe0b;
+    min-height: 50vh;
+}
+
+.noOrder{
+    font-size: 6.5vh;
+    text-align: center;
+}
+
+.orderGot{
+    height: 100px;
+    width: 300px;
+    overflow: scroll;
+    border-radius: 15px;
+    background-color: rgb(255, 247, 225);
+    box-shadow: 5px 10px 5px #747474;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#OrderData{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

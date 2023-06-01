@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User page</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/user_login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+
+
+  <!-- Menu -->
+  <div class="menu">
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <ion-icon name="grid-outline"></ion-icon>
+      </label>
+
+      <label class="logo">Flavour Fetch</label>
+
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./home.html#about">About</a></li>
+        <li><a href="./menu.html">Menu</a></li>
+        <li><a href="./chef_login.html">Chef</a></li>
+        <li><a href="./user_login.html" class="active">User</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- End Menu -->
+
+  <section>
+    <div class="container">
+      <div class="user signinBx">
+        <div class="imgBx"><img
+            src="https://c4.wallpaperflare.com/wallpaper/237/676/881/meat-4k-windows-hd-download-wallpaper-preview.jpg"
+            alt="" /></div>
+        <div class="formBx">
+          <h2>Sign In</h2>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit" id="login-btn">Login</button>
+          <div class="social-login">
+            <p>Or login with:</p>
+            <button id="google-btn"><img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                style="height:18px; width:18px; transform: translateY(3px);"> Sign in with Google</button><br>
+            <button id="phone-btn" onclick="window.location.href = './phone-simple-popup.html'"><img
+                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/phone.svg"
+                style="height:18px; width:18px; transform: translateY(3px);"> Sign in with phone</button><br>
+            <button id="apple-btn"><img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/apple.png"
+                style="height:18px; width:18px; transform: translateY(3px);"> Sign in with Apple</button><br>
+            <button id="guest-btn" onclick="window.location.href = './user_dashboard.html'"><img
+                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/anonymous.png"
+                style="height:18px; width:18px; transform: translateY(3px);"> Continue as guest</button><br>
+
+          </div>
+          <p class="signup">
+            Don't have an account ?
+            <a href="#" onclick="toggleForm();">Sign Up.</a>
+          </p>
+        </div>
+
+      </div>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form id="register">
+            <!-- <div class="alert">Registered successfully</div> -->
+            <h2>Create an account</h2>
+            <input type="text" name="" id="name" placeholder="Name" />
+            <input type="tel" name="" id="phonenumber" placeholder="Phone Number" />
+            <input type="text" name="" id="username" placeholder="Username" />
+            <input type="email" name="" id="email01" placeholder="Email Address" />
+            <input type="password" name="" id="password01" placeholder="Create Password" />
+            <input type="password" name="" id="confirmpassword" placeholder="Confirm Password" />
+            <button type="submit" id="submit" name="submit">Submit</button>
+
+            <p class="signup">
+              Already have an account ?
+              <a href="#" onclick="toggleForm();">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img
+            src="https://thumbs.dreamstime.com/b/assorted-indian-food-dark-wooden-background-dishes-appetizers-cuisine-curry-butter-chicken-rice-lentils-paneer-88514094.jpg"
+            alt="" /></div>
+      </div>
+    </div>
+  </section>
+  <script src="./js/user_login.js"></script>
+
+  <div class="popup" id="popup">
+    <h1>Firebase Phone Auth with reCAPTCHA</h1>
+
+    <!-- Add a container element for the reCAPTCHA widget -->
+    <div id="recaptcha-container"></div>
+
+    <!-- Add a form to get the user's phone number -->
+    <form id="verifuCode">
+      <label for="phone">Enter your phone number:</label><br>
+      <input type="tel" id="phone" name="phone" required>
+      <button type="submit">Get Verification Code</button>
+    </form>
+
+    <!-- Add a form to enter the verification code -->
+    <form id="submitCode">
+      <label for="code">Enter the verification code:</label><br>
+      <input type="text" id="code" name="code" required>
+      <button type="submit">Verify Code</button>
+    </form>
+
+    <!-- Add a placeholder element for displaying errors -->
+    <div id="error"></div>
+    <p>©Flavour Fetch2023</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container flex">
+      <div class="footer-about">
+        <h2>About</h2>
+        <p>
+          Home cooked food is healthier than fast food or takeout.
+          The nutritional value of the produce used will be maintained when you cook at home.
+          Usually, the takeout that you order will have a lot of oil, butter and spices which might not be healthy,
+          especially when eaten on a daily basis.
+        </p>
+      </div>
+
+      <div class="footer-category">
+        <h2>Our Menu</h2>
+
+        <ul>
+          <li>Biryani</li>
+          <li>Chicken</li>
+          <li>Pizza</li>
+          <li>Burger</li>
+          <li>Pasta</li>
+        </ul>
+      </div>
+
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+
+        <ul>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Menu</li>
+          <li>Order</li>
+          <li>Services</li>
+        </ul>
+      </div>
+
+      <div class="get-in-touch">
+        <h2>Get in touch</h2>
+        <ul>
+          <li>Account</li>
+          <li>Support Center</li>
+          <li>Feedback</li>
+          <li>Suggession</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright &copy; 2022. All Rights Reserved.</p>
+    </div>
+  </div>
+
+
+  <!-- End Footer -->
+
+  <!-- Ion Icons Js -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js'
+    // Add Firebase products that you want to use
+    import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, GoogleAuthProvider, signOut, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js'
+
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDLTmNykPXkx4XGLNKz8WxCo_y1QOFz9cE",
+      authDomain: "flavour-fetch-1d5e3.firebaseapp.com",
+      databaseURL: "https://flavour-fetch-1d5e3-default-rtdb.firebaseio.com",
+      projectId: "flavour-fetch-1d5e3",
+      storageBucket: "flavour-fetch-1d5e3.appspot.com",
+      messagingSenderId: "733016344539",
+      appId: "1:733016344539:web:5ab3d2f270d4d8458b49fe",
+      measurementId: "G-G3VF6W2K76"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app)
+
+    var email
+    var password
+    $('#login-btn').on('click', () => {
+      email = $('#email').val()
+      password = $('#password').val()
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log(user)
+          console.log(user.emailVerified)
+          if (!user.emailVerified) {
+            window.location.href = "./user_dashboard.html";
+            //alert("Your Account is not verified");
+            user.email.sendEmailVerification()
+              .then(() => {
+                alert('A verification email has been sent to your email address. Please verify your email and sign in again.');
+              })
+              .catch((error) => {
+                console.error(error);
+                alert('An error occurred while sending the verification email. Please try again later.');
+              });
+            alert("done")
+          }
+          else {
+            alert("Login Successful")
+            window.location.href = "./user_dashboard.html";
+          }
+          // ...
+        })
+        .catch((error) => {
+          //alert("Invalid login")
+          const errorCode = error.code;
+          const errorMessage = error.message;
+        });
+
+    })
+
+    $('#google-btn').on('click', () => {
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          // This gives you a Google Access Token. You can use it to access the Google API.
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const token = credential.accessToken;
+          // The signed-in user info.
+          const user_google = result.user;
+          console.log(user_google)
+          console.log(user_google.emailVerified)
+          if (!user_google.emailVerified) {
+            alert("Your Account is not verified")
+          }
+          else {
+            window.location.href = "./user_dashboard.html";
+          }
+          // IdP data available using getAdditionalUserInfo(result)
+          // ...
+        }).catch((error) => {
+          // Handle Errors here.
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // The email of the user's account used.
+          const email = error.customData.email;
+          // The AuthCredential type that was used.
+          const credential = GoogleAuthProvider.credentialFromError(error);
+          // ...
+        });
+
+    })
+
+
+    $('#logout').on('click', () => {
+      signOut(auth).then(() => {
+        // Sign-out successful.
+      }).catch((error) => {
+        // An error happened.
+      });
+    })
+
+
+    // Get a reference to the database service
+    const db = getDatabase(app);
+
+    document.getElementById('register').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nameval = /^[A-Za-z\s]+$/
+      var name = document.getElementById('name').value;
+      var phoneval = /^[6789]\d{9}$/
+      var phone = document.getElementById('phonenumber').value;
+      var userval = /^[a-zA-Z0-9]{8,16}$/
+      var username = document.getElementById('username').value;
+      var passval = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\S]{8,}$/
+      var password = document.getElementById('password01').value;
+      var cpassword = document.getElementById('confirmpassword').value;
+      var emailval = /^[A-Za-z0-9._%+-]+@gmail\.com$/
+      var email = document.getElementById('email01').value;
+      if (!nameval.test(name)) {
+        alert("Enter name.\nName must contain only alphabets.");
+      }
+      else if (!phoneval.test(phone)) {
+        alert("Enter valid 10 digit mobile number.");
+      }
+      else if (!userval.test(username)) {
+        alert("Username must contain 8-16 characters only.\nUsername is alphanumeric.")
+      }
+      else if (!emailval.test(email)) {
+        alert("Enter valid email.\nOnly gmail ID is accepted.")
+      }
+      else if (!passval.test(password)) {
+        alert("Password must contain atleast 8 characters.\nPassword must contain atleast 1 uppercase letter, 1 lowercase letter and 1 digit.")
+      }
+      else if (password != cpassword) {
+        alert("Passwords does not match.");
+      }
+      else {
+        set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+          name: document.getElementById('name').value,
+          phonenumber: document.getElementById('phonenumber').value,
+          username: document.getElementById('username').value,
+          email: document.getElementById('email01').value,
+          password: document.getElementById('password01').value,
+          confirmpassword: document.getElementById('confirmpassword').value
+        });
+        const email = document.getElementById("email01").value;
+        const pass = document.getElementById("password01").value;
+
+        firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function (error) {
+          console.log(error.message);
+        });
+        document.getElementById("popup").style.display = "block";
+        document.getElementById('register').reset();
+      }
+    });
+
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Create a reCAPTCHA verifier instance
+    const recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+      size: 'invisible',
+      callback: (response) => {
+        // reCAPTCHA verification successful, proceed with phone auth
+      }
+    });
+
+    // Function to start phone authentication
+    $('#verifuCode').on('submit', () => {
+      event.preventDefault();
+      const phoneNumber = document.getElementById('phone').value;
+      firebase.auth().signInWithPhoneNumber(phoneNumber, recaptchaVerifier)
+        .then((confirmationResult) => {
+          // SMS verification code sent successfully, save the confirmation result
+          window.confirmationResult = confirmationResult;
+        })
+        .catch((error) => {
+          // Phone authentication failed, display the error message
+          document.getElementById('error').innerHTML = error.message;
+        });
+    });
+
+    // Function to submit the verification code
+    $('#submitCode').on('submit', () => {
+      event.preventDefault();
+      const code = document.getElementById('code').value;
+      confirmationResult.confirm(code)
+        .then((result) => {
+          // Phone authentication successful, user signed in
+          document.getElementById("popup").style.display = "none";
+          alert('Your form is submitted');
+        })
+        .catch((error) => {
+          // Verification code invalid, display the error message
+          document.getElementById('error').innerHTML = error.message;
+        });
+
+    })
+
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js"></script>
+
+</body>
+
+</html>
